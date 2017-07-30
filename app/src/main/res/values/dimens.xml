@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin32">32dp</dimen>
+    <dimen name="margin24">24dp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+    <dimen name="card_width">60dp</dimen>
+    <dimen name="card_height">90dp</dimen>
+    <dimen name="btn_width">180dp</dimen>
+    <dimen name="btn_height">45dp</dimen>
+</resources>

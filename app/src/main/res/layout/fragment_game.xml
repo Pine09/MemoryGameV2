@@ -1,0 +1,413 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Turn:"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turn" />
+
+    <TextView
+        android:id="@+id/txtMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mode"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel xmlns:wheel="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress_wheel_game"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="32dp"
+        wheel:layout_constraintLeft_toLeftOf="parent"
+        wheel:layout_constraintRight_toRightOf="parent"
+        wheel:layout_constraintTop_toTopOf="parent"
+        wheel:matProg_barColor="#ff5252"
+        wheel:matProg_circleRadius="90dp"
+        wheel:matProg_progressIndeterminate="true"
+        wheel:matProg_rimColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="28dp"
+        android:text="100"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="@+id/txtMode"
+        app:layout_constraintRight_toRightOf="@+id/txtMode"
+        app:layout_constraintTop_toBottomOf="@+id/txtMode" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Score"
+        android:textColor="#fff"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <ImageButton
+        android:id="@+id/btn1"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintBottom_toBottomOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn2"
+        app:layout_constraintTop_toTopOf="@+id/btn2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn2"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintBottom_toBottomOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn3"
+        app:layout_constraintTop_toTopOf="@+id/btn3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn3"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <ImageButton
+        android:id="@+id/btn4"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintBottom_toBottomOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/btn3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn5"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintBottom_toBottomOf="@+id/btn4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/btn4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/btn6"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/btn1"
+        app:layout_constraintRight_toRightOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <ImageButton
+        android:id="@+id/btn7"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn2"
+        app:layout_constraintRight_toRightOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+    <ImageButton
+        android:id="@+id/btn8"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/btn3"
+        app:layout_constraintRight_toRightOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+    <ImageButton
+        android:id="@+id/btn9"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn4"
+        app:layout_constraintRight_toRightOf="@+id/btn4"
+        app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+    <ImageButton
+        android:id="@+id/btn10"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn5"
+        app:layout_constraintRight_toRightOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+    <ImageButton
+        android:id="@+id/btn11"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn6"
+        app:layout_constraintRight_toRightOf="@+id/btn6"
+        app:layout_constraintTop_toBottomOf="@+id/btn6" />
+
+    <ImageButton
+        android:id="@+id/btn12"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn7"
+        app:layout_constraintRight_toRightOf="@+id/btn7"
+        app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+    <ImageButton
+        android:id="@+id/btn13"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/btn8"
+        app:layout_constraintRight_toRightOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+    <ImageButton
+        android:id="@+id/btn14"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn9"
+        app:layout_constraintRight_toRightOf="@+id/btn9"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <ImageButton
+        android:id="@+id/btn15"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn10"
+        app:layout_constraintRight_toRightOf="@+id/btn10"
+        app:layout_constraintTop_toBottomOf="@+id/btn10" />
+
+    <ImageButton
+        android:id="@+id/btn18"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn13"
+        app:layout_constraintRight_toRightOf="@+id/btn13"
+        app:layout_constraintTop_toBottomOf="@+id/btn13" />
+
+    <ImageButton
+        android:id="@+id/btn17"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn12"
+        app:layout_constraintRight_toRightOf="@+id/btn12"
+        app:layout_constraintTop_toBottomOf="@+id/btn12" />
+
+    <ImageButton
+        android:id="@+id/btn16"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn11"
+        app:layout_constraintRight_toRightOf="@+id/btn11"
+        app:layout_constraintTop_toBottomOf="@+id/btn11" />
+
+    <ImageButton
+        android:id="@+id/btn19"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn14"
+        app:layout_constraintRight_toRightOf="@+id/btn14"
+        app:layout_constraintTop_toBottomOf="@+id/btn14" />
+
+    <ImageButton
+        android:id="@+id/btn20"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:elevation="10dp"
+        android:src="@drawable/bird_48px"
+        app:layout_constraintLeft_toLeftOf="@+id/btn15"
+        app:layout_constraintRight_toRightOf="@+id/btn15"
+        app:layout_constraintTop_toBottomOf="@+id/btn15" />
+
+    <Button
+        android:id="@+id/btnRefill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/card_disabled"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingRight="@dimen/margin16"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

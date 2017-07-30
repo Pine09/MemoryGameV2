@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="High Score"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="#64ffda"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highscore" />
+
+    <TextView
+        android:id="@+id/relax_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="Relax Mode"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#64ffda"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relax_mode" />
+
+    <TextView
+        android:id="@+id/rankRM1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="1. "
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameRM1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/nameRM1" />
+
+    <TextView
+        android:id="@+id/nameRM1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="CBN"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/scoreRM1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="10000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameRM1"
+        app:layout_constraintLeft_toRightOf="@+id/nameRM1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/rankRM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="2."
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintLeft_toLeftOf="@+id/rankRM1"
+        app:layout_constraintRight_toRightOf="@+id/rankRM1"
+        app:layout_constraintTop_toBottomOf="@+id/rankRM1" />
+
+    <TextView
+        android:id="@+id/nameRM2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="ISO"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/nameRM1"
+        app:layout_constraintRight_toRightOf="@+id/nameRM1"
+        app:layout_constraintTop_toBottomOf="@+id/nameRM1" />
+
+    <TextView
+        android:id="@+id/scoreRM2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="8000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreRM1"
+        app:layout_constraintRight_toRightOf="@+id/scoreRM1"
+        app:layout_constraintTop_toBottomOf="@+id/scoreRM1" />
+
+    <TextView
+        android:id="@+id/rankRM3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="3."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/rankRM2"
+        app:layout_constraintRight_toRightOf="@+id/rankRM2"
+        app:layout_constraintTop_toBottomOf="@+id/rankRM2" />
+
+    <TextView
+        android:id="@+id/nameRM3"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="OVA"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/nameRM2"
+        app:layout_constraintRight_toRightOf="@+id/nameRM2"
+        app:layout_constraintTop_toBottomOf="@+id/nameRM2" />
+
+    <TextView
+        android:id="@+id/scoreRM3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="6000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreRM2"
+        app:layout_constraintRight_toRightOf="@+id/scoreRM2"
+        app:layout_constraintTop_toBottomOf="@+id/scoreRM2" />
+
+    <TextView
+        android:id="@+id/rankRM4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="4."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/rankRM3"
+        app:layout_constraintRight_toRightOf="@+id/rankRM3"
+        app:layout_constraintTop_toBottomOf="@+id/rankRM3" />
+
+    <TextView
+        android:id="@+id/nameRM4"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="MKV"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/nameRM3"
+        app:layout_constraintRight_toRightOf="@+id/nameRM3"
+        app:layout_constraintTop_toBottomOf="@+id/nameRM3" />
+
+    <TextView
+        android:id="@+id/scoreRM4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="2000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreRM3"
+        app:layout_constraintRight_toRightOf="@+id/scoreRM3"
+        app:layout_constraintTop_toBottomOf="@+id/scoreRM3" />
+
+    <TextView
+        android:id="@+id/rankRM5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="5."
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/rankRM4"
+        app:layout_constraintRight_toRightOf="@+id/rankRM4"
+        app:layout_constraintTop_toBottomOf="@+id/rankRM4" />
+
+    <TextView
+        android:id="@+id/nameRM5"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/nameRM4"
+        app:layout_constraintRight_toRightOf="@+id/nameRM4"
+        app:layout_constraintTop_toBottomOf="@+id/nameRM4" />
+
+    <TextView
+        android:id="@+id/scoreRM5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreRM4"
+        app:layout_constraintRight_toRightOf="@+id/scoreRM4"
+        app:layout_constraintTop_toBottomOf="@+id/scoreRM4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="283dp" />
+
+    <TextView
+        android:id="@+id/challange_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="Challange Mode"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="3dp"
+        android:background="#64ffda"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/challange_mode" />
+
+    <TextView
+        android:id="@+id/rankCM1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="1."
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameCM1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/nameCM1" />
+
+    <TextView
+        android:id="@+id/nameCM1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:maxLength="3"
+        android:text="WLZ"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/scoreCM1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="10000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameCM1"
+        app:layout_constraintLeft_toRightOf="@+id/nameCM1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/rankCM2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="2."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/rankCM1"
+        app:layout_constraintRight_toRightOf="@+id/rankCM1"
+        app:layout_constraintTop_toBottomOf="@+id/rankCM1" />
+
+    <TextView
+        android:id="@+id/nameCM2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="ALX"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/nameCM1"
+        app:layout_constraintRight_toRightOf="@+id/nameCM1"
+        app:layout_constraintTop_toBottomOf="@+id/nameCM1" />
+
+    <TextView
+        android:id="@+id/scoreCM2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="8000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreCM1"
+        app:layout_constraintRight_toRightOf="@+id/scoreCM1"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCM1" />
+
+    <TextView
+        android:id="@+id/rankCM3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="3."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/rankCM2"
+        app:layout_constraintRight_toRightOf="@+id/rankCM2"
+        app:layout_constraintTop_toBottomOf="@+id/rankCM2" />
+
+    <TextView
+        android:id="@+id/nameCM3"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="TQZ"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/nameCM2"
+        app:layout_constraintRight_toRightOf="@+id/nameCM2"
+        app:layout_constraintTop_toBottomOf="@+id/nameCM2" />
+
+    <TextView
+        android:id="@+id/scoreCM3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="6000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreCM2"
+        app:layout_constraintRight_toRightOf="@+id/scoreCM2"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCM2" />
+
+    <TextView
+        android:id="@+id/rankCM4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="4."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/rankCM3"
+        app:layout_constraintRight_toRightOf="@+id/rankCM3"
+        app:layout_constraintTop_toBottomOf="@+id/rankCM3" />
+
+    <TextView
+        android:id="@+id/nameCM4"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="RAR"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/nameCM3"
+        app:layout_constraintRight_toRightOf="@+id/nameCM3"
+        app:layout_constraintTop_toBottomOf="@+id/nameCM3" />
+
+    <TextView
+        android:id="@+id/scoreCM4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="2000"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreCM3"
+        app:layout_constraintRight_toRightOf="@+id/scoreCM3"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCM3" />
+
+    <TextView
+        android:id="@+id/rankCM5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="5."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/rankCM4"
+        app:layout_constraintRight_toRightOf="@+id/rankCM4"
+        app:layout_constraintTop_toBottomOf="@+id/rankCM4" />
+
+    <TextView
+        android:id="@+id/nameCM5"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/nameCM4"
+        app:layout_constraintRight_toRightOf="@+id/nameCM4"
+        app:layout_constraintTop_toBottomOf="@+id/nameCM4" />
+
+    <TextView
+        android:id="@+id/scoreCM5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/scoreCM4"
+        app:layout_constraintRight_toRightOf="@+id/scoreCM4"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCM4" />
+
+
+</android.support.constraint.ConstraintLayout>
