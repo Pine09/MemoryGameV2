@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.mg.Model.score;
+
+import io.realm.Realm;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +24,7 @@ public class ResultFragment extends Fragment {
     private TextView txtName, txtResultScore, txtMode, txtMsg;
     private String name, mode, msg;
     private int resultscore;
+    private Realm realm;
 
     public ResultFragment() {
         // Required empty public constructor
@@ -55,7 +60,17 @@ public class ResultFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        realm.getDefaultInstance();
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                Number max=realm.where(score.class).max("id");
+                score nilai=realm.createObject(score.class,max);
+                nilai.setScore(resultscore);
+                nilai.setMode(mode);
+                nilai.setName(name);
+            }
+        });
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
