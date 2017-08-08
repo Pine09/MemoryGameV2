@@ -64,6 +64,9 @@ public class ResultFragment extends Fragment {
             @Override
             public void execute(Realm realm) {
                 Number max=realm.where(score.class).max("id");
+                if (max == null) {
+                    max = 1;
+                }
                 String idmax=max.toString();
                 int a= Integer.valueOf(idmax)+1;
                 score nilai=realm.createObject(score.class,a);
