@@ -140,7 +140,7 @@ public class ChallangeModeFragment extends Fragment {
                         unclickable();
                         message();
                         progressWheel.stopSpinning();
-                        Toast.makeText(getContext(), "TIME's UP!", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getContext(), "TIME's UP!", Toast.LENGTH_SHORT).show();
                         ((MainActivity)getActivity()).popDialog(mode, score, msg);
                     }// untuk kalau 0 finish
                 };

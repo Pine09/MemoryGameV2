@@ -12,8 +12,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.mg.Model.score;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 public class MainFragment extends Fragment {
     private Button btnstart, btnexit, btnhighscore;
+    private Realm realm;
     public MainFragment() {
         // Required empty public constructor
     }
@@ -32,7 +38,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        realm.getDefaultInstance();
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
