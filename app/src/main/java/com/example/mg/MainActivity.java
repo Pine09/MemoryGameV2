@@ -3,6 +3,7 @@ package com.example.mg;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
@@ -18,22 +19,35 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.Theme;
+import com.example.mg.Model.score;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 import static android.R.id.input;
 
 
 public class MainActivity extends AppCompatActivity {
     protected ImageButton btn1;
+    private Realm realm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        realm=realm.getDefaultInstance();
         setContentView(R.layout.activity_main);
+//        realm.executeTransaction(new Realm.Transaction() {
+//            @Override
+//            public void execute(Realm realm) {
+//                score nilai=realm.createObject(score.class,5);
+//                nilai.setScore(1000);
+//                nilai.setMode("Relax");
+//                nilai.setName("AWI");
+//            }
+//        });
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
@@ -100,4 +114,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close();
+    }
 }

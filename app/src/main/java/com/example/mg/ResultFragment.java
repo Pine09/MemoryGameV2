@@ -42,7 +42,7 @@ public class ResultFragment extends Fragment {
         txtName = (TextView) v.findViewById(R.id.txtName);
         txtMode = (TextView) v.findViewById(R.id.txtMode);
         txtResultScore = (TextView) v.findViewById(R.id.txtResultScore);
-
+        realm=realm.getDefaultInstance();
         msg = getArguments().getString("msg");
         name = getArguments().getString("username");
         mode = getArguments().getString("mode");
@@ -60,11 +60,11 @@ public class ResultFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        realm.getDefaultInstance();
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 Number max=realm.where(score.class).max("id");
+                max=+1;
                 score nilai=realm.createObject(score.class,max);
                 nilai.setScore(resultscore);
                 nilai.setMode(mode);
@@ -98,5 +98,11 @@ public class ResultFragment extends Fragment {
 
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        realm.close();
     }
 }

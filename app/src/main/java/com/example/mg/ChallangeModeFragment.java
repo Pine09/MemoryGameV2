@@ -1,5 +1,6 @@
 package com.example.mg;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -35,6 +36,9 @@ public class ChallangeModeFragment extends Fragment {
     private ImageButton btnOne, btnTwo;
     private Button btnRefill;
     private String msg;
+
+    private MediaPlayer cardflip = new MediaPlayer();
+    private MediaPlayer bg_music = new MediaPlayer();
 
     private float scale = 0.5f;
     private List<Integer> arContent;
@@ -111,7 +115,10 @@ public class ChallangeModeFragment extends Fragment {
 
         btnRefill = (Button) v.findViewById(R.id.btnRefill);
 
-
+        cardflip = MediaPlayer.create(getActivity(), R.raw.cardflip);
+        bg_music = MediaPlayer.create(getActivity(), R.raw.hangoverblues);
+        bg_music.start();
+        bg_music.setLooping(true);
 
         return v;
     }
@@ -309,6 +316,15 @@ public class ChallangeModeFragment extends Fragment {
                 }
             }, 50);
 
+            if (cardflip.isPlaying()){
+                cardflip.pause();
+                cardflip.seekTo(0);
+                cardflip.start();
+            }
+            else {
+                cardflip.start();
+            }
+
             klik = false;
         } else {
             btnTwo = btncheck;
@@ -316,6 +332,15 @@ public class ChallangeModeFragment extends Fragment {
             btnTwo.setBackgroundResource(R.drawable.card_open);
             btnTwo.setImageResource(arContent.get(no - 1));
             btnTwo.setScaleX(scale);
+
+            if (cardflip.isPlaying()){
+                cardflip.pause();
+                cardflip.seekTo(0);
+                cardflip.start();
+            }
+            else {
+                cardflip.start();
+            }
 
             turn--;
             txtTurn.setText(turn + "");
@@ -503,4 +528,15 @@ public class ChallangeModeFragment extends Fragment {
         btn19.setClickable(false);        btn20.setClickable(false);
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        bg_music.pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        bg_music.start();
+    }
 }
