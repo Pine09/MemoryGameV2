@@ -56,6 +56,10 @@ public class ResultFragment extends Fragment {
         txtName.setText(name);
         txtMode.setText(mode + " Mode");
         txtResultScore.setText(resultscore + "");
+
+        result = MediaPlayer.create(getActivity(), R.raw.tada);
+        result.start();
+
         return v;
     }
 
