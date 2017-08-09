@@ -115,7 +115,7 @@ public class RelaxModeFragment extends Fragment {
         btnRefill = (Button) v.findViewById(R.id.btnRefill);
         btnRefill.setVisibility(View.GONE);
 
-        cardflip = MediaPlayer.create(getActivity(), R.raw.cardflip);
+        cardflip = MediaPlayer.create(getActivity(), R.raw.card_flip_modified);
 
         bg_music = MediaPlayer.create(getActivity(), R.raw.hangoverblues);
         bg_music.start();

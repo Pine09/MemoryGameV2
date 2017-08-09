@@ -39,6 +39,7 @@ public class ChallangeModeFragment extends Fragment {
 
     private MediaPlayer cardflip = new MediaPlayer();
     private MediaPlayer bg_music = new MediaPlayer();
+//    private MediaPlayer correct = new MediaPlayer();
 
     private float scale = 0.5f;
     private List<Integer> arContent;
@@ -115,8 +116,9 @@ public class ChallangeModeFragment extends Fragment {
 
         btnRefill = (Button) v.findViewById(R.id.btnRefill);
 
-        cardflip = MediaPlayer.create(getActivity(), R.raw.cardflip);
-        bg_music = MediaPlayer.create(getActivity(), R.raw.hangoverblues);
+        cardflip = MediaPlayer.create(getActivity(), R.raw.card_flip_modified);
+        bg_music = MediaPlayer.create(getActivity(), R.raw.aceofdiamonds);
+//        correct = MediaPlayer.create(getActivity(), R.raw.correct_answer);
         bg_music.start();
         bg_music.setLooping(true);
 
@@ -371,6 +373,7 @@ public class ChallangeModeFragment extends Fragment {
                         btnOne.setTag("Open"); btnTwo.setTag("Open");
                         btnOne = null; btnTwo = null;
                         klik = true;
+//                        correct.start();
                         multiplier();
                         checkwin();
 

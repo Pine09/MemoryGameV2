@@ -2,6 +2,7 @@ package com.example.mg;
 
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,7 @@ public class ResultFragment extends Fragment {
     private String name, mode, msg;
     private int resultscore;
     private Realm realm;
+    private MediaPlayer result = new MediaPlayer();
 
     public ResultFragment() {
         // Required empty public constructor
